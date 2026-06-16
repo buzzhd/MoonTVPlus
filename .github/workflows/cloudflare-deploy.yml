@@ -1,7 +1,7 @@
 name: Deploy to Cloudflare
 
 on:
-push:
+  push:
     branches:
       - main
   workflow_dispatch:
@@ -14,9 +14,10 @@ permissions:
   contents: read
   deployments: write
 
-jobs:
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Deploy to Cloudflare Pages
